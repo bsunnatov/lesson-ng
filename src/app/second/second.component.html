@@ -1,0 +1,7 @@
+<div class="second-container">
+  <p>second works!</p>
+  <input [(ngModel)]="message">
+  <div>{{message}}</div>
+
+</div>
+<app-first [messageFromSecond]="message"></app-first>

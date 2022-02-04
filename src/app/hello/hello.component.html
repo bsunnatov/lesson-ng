@@ -1,0 +1,6 @@
+<p [class.isRed]="false">hello works!</p>
+<p [style.color]="true? 'brown' : 'green'">hello works!</p>
+<h2 [hidden]="!message">{{message}}</h2>
+<input [(ngModel)]="message">
+<input type="text" [value]="message" />
+<button (click)="changeMesssage()">Добавить</button>

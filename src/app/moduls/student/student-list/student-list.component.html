@@ -1,0 +1,24 @@
+<p>Talabalar ro`yxati</p>
+<ul>
+  <li *ngFor="let item of students">
+    {{item.firstName}} {{item.lastName}} - yosh: {{item.age}} <span *ngIf="false">Info </span>
+  </li>
+</ul>
+<table style="width: 100%;" border="1">
+  <thead>
+    <tr>
+      <td>T/r</td>
+      <th>Fam</th>
+      <th>Ismi</th>
+      <th>Yoshi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of students; let i = index;">
+      <td>{{i+1}}</td>
+      <td>{{item.firstName}}</td>
+      <td>{{item.lastName}}</td>
+      <td>{{item.age}}</td>
+    </tr>
+  </tbody>
+</table>
