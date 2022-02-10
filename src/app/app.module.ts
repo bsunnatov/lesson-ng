@@ -11,6 +11,7 @@ import { SecondComponent } from './second/second.component';
 import { UnlessDirective } from './directives/unless.directive';
 import { StudentModule } from './moduls/student/student.module';
 import { NotShowDirective } from './directives/not-show.directive';
+import { DataServiceService } from './services/data-service.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { NotShowDirective } from './directives/not-show.directive';
     StudentModule
   ],
   exports:[],
-  providers: [],
+  providers: [DataServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
