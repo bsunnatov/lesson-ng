@@ -1,16 +1,21 @@
 import { LogService } from './log.service';
 import { Injectable } from '@angular/core';
+import { Product } from '../model/product.model';
 
 @Injectable()
 export class DataServiceService {
-  private data: string[] = ['Apple IPhone XR', 'Samsung Galaxy S9', 'Nokia S9'];
+  private data: any[] = [];
+  private products: any[] = [{ id: 1, name: 'Lenevo', details: 'Lenevo y 700 16 GB RAM' }, { id: 2, name: 'HP', details: 'HP 1600 32 GB RAM' }]
   constructor(private logService: LogService) { }
-  getData(): string[] {
+  getData(): Product[] {
     this.logService.information('malumotlar olindi...')
     return this.data;
   }
-  addData(name: string) {
+  addData(product: Product) {
     this.logService.information('Yangi malumot qushildi...')
-    this.data.push(name)
+    this.data.push(product)
+  }
+  getProducts() {
+    return this.products;
   }
 }
