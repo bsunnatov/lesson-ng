@@ -16,6 +16,8 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { Routes } from '@angular/router';
 import { ProductListComponent } from './pages/product-list/product-list.component';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientExampleComponent } from './pages/http-client-example/http-client-example.component';
 // определение маршрутов
 
 @NgModule({
@@ -30,6 +32,7 @@ import { ProductDetailComponent } from './pages/product-detail/product-detail.co
     NotFoundComponent,
     ProductListComponent,
     ProductDetailComponent,
+    HttpClientExampleComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,8 @@ import { ProductDetailComponent } from './pages/product-detail/product-detail.co
     FormsModule,
     ReactiveFormsModule,
     StudentModule,
-    FormExampleModule
+    FormExampleModule,
+    HttpClientModule
   ],
   exports:[],
   providers: [DataServiceService],

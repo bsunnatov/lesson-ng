@@ -1,0 +1,30 @@
+<div class="container">
+  <p>http-client-example works!</p>
+  <table class="table table-stripped ">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>title</th>
+        <th>Body</th>
+        <th>UserID</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of posts">
+        <td>{{item.id}}</td>
+        <td>{{item.title}}</td>
+        <td>{{item.body}}</td>
+        <td>{{item.userId}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div *ngIf="errorMessage" class="alert alert-danger">
+    <i>{{errorMessage}}</i>
+  </div>
+  <button class="btn btn-primary" (click)="postData()">
+    Post (Create)
+  </button>
+  <button class="btn btn-success" (click)="editItem()">
+    PUT (Edit)
+  </button>
+</div>
