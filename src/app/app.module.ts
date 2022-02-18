@@ -18,6 +18,11 @@ import { ProductListComponent } from './pages/product-list/product-list.componen
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpClientExampleComponent } from './pages/http-client-example/http-client-example.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
 // определение маршрутов
 
 @NgModule({
@@ -41,7 +46,12 @@ import { HttpClientExampleComponent } from './pages/http-client-example/http-cli
     ReactiveFormsModule,
     StudentModule,
     FormExampleModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatButtonModule,
+    MatTableModule,
+    MatPaginatorModule
   ],
   exports:[],
   providers: [DataServiceService],
