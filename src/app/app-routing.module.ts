@@ -15,6 +15,7 @@ const routes: Routes = [
   { path: 'products', component: ProductListComponent },
   { path: 'http-client', component: HttpClientExampleComponent },
   { path: 'pipes', loadChildren: () => import('./moduls/pipe-example/pipe-example.module').then(a => a.PipeExampleModule) },
+  { path: 'my-todo', loadChildren: () => import('./moduls/todo/todo.module').then(a => a.TodoModule) },
   { path: 'productDetails/:id', component: ProductDetailComponent },
   {
     path: '**',
