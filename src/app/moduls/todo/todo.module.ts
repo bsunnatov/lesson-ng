@@ -8,6 +8,7 @@ import { TodoRoutingModule } from './todo-routing.module';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { TodoEditFormComponent } from './todo-edit-form/todo-edit-form.component';
 import { TodoEditModalDialogComponent } from './todo-edit-modal-dialog/todo-edit-modal-dialog.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -24,7 +25,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatInputModule,
     MatDialogModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MatCheckboxModule
   ]
 })
 export class TodoModule { }
